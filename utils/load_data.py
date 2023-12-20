@@ -4,7 +4,12 @@ import pickle as pkl
 print('loading data -------------------')
 
 def load_movies():
-    return pkl.load(open('./data/movies.pkl','rb'))
+    with open('./data/movies.pkl', 'rb') as movies:
+        return pkl.load(movies)
 
 def load_simillarities():
-    return pkl.load(open('./data/similarities.pkl','rb'))
+    with open('./data/similarities.pkl', 'rb') as similarities:
+        return pkl.load(similarities)
+
+# def load_simillarities():
+#     return pkl.load(open('./data/similarities.pkl','rb'))

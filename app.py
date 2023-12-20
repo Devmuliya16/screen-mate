@@ -16,9 +16,9 @@ similarities = load_data.load_simillarities()
 path = os.path.join(os.getcwd(),'client','dist')
 
 
-# @app.route('/')
-# def hello():
-#     return send_from_directory(directory=path,path='index.html') --> will not work
+@app.route('/')
+def hello():
+    return send_from_directory(directory=path,path='index.html')# --> will not work
 
 
 @app.route('/<path:filename>')

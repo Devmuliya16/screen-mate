@@ -10,7 +10,7 @@ const Home = () => {
     const [result,setResult] = useState([]);
     const search = async (e)=>{
         setText(e.target.value)
-        const response = await fetch(`http://127.0.0.1:5000/api/search/${e.target.value}`,{
+        const response = await fetch(`/api/search/${e.target.value}`,{
             method:"GET",
             credentials: 'include', 
             headers: {

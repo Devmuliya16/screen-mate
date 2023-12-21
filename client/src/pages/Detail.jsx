@@ -7,7 +7,7 @@ const Detail = () => {
   const { id } = useParams();
   const [details,setDetails] =   useState({});
   const getMovieDetails = async ()=>{
-    const response = await fetch(`http://127.0.0.1:5000/api/details/${id}`,{
+    const response = await fetch(`/api/details/${id}`,{
       method:'GET',
       credentials:'include',
       headers:{

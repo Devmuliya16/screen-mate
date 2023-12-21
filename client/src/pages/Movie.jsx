@@ -7,7 +7,7 @@ const Movie = () => {
     const [result,setResult] = useState([]);
 
     const getRecommandations = async (name)=>{
-        const response = await fetch(`http://127.0.0.1:5000/api/recommand?name=${name}&length=20`,{
+        const response = await fetch(`/api/recommand?name=${name}&length=20`,{
             method:"GET",
             headers:{
                 'Content-Type': 'application/json',

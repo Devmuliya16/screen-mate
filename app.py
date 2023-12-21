@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify, send_from_directory
-from flask_cors import CORS
+# from flask_cors import CORS
 from utils import load_data, recommand ,search_movie
 import os
 
 
 app = Flask(__name__,static_folder="client/dist")
-CORS(app, origins=["http://localhost:5173"], supports_credentials=True)
+# CORS(app, origins=["http://localhost:5173"], supports_credentials=True)
 
 
 # load the data
@@ -42,4 +42,5 @@ def get_movie(id):
     return search_movie.search_by_id(id,movies)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False,port=int(os.environ.get('PORT', 5000)))
+    # app.run(debug=True)

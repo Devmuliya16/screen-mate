@@ -1,9 +1,9 @@
-import ast
-
 def recommand_movies(name,data,similarity,length):
     movie_index = data[data['title']==name].index[0]
-    distances = similarity[movie_index]
-    movie_list = sorted(enumerate(distances),reverse=True,key=lambda x: x[1])[1:length]
+    # distances = similarity[movie_index]
+    # movie_list = sorted(enumerate(distances),reverse=True,key=lambda x: x[1])[1:length]
+
+    movie_list = similarity[movie_index][1:length]
 
     li = []
     for i in movie_list:

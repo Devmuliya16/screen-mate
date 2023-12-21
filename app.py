@@ -42,5 +42,5 @@ def get_movie(id):
     return search_movie.search_by_id(id,movies)
 
 if __name__ == '__main__':
-    app.run(debug=False,port=int(os.environ.get('PORT', 5000)))
+    app.run(debug=False,host='0.0.0.0',port=int(os.environ.get('PORT', 5000)))
     # app.run(debug=True)

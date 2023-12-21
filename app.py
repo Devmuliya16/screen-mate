@@ -18,7 +18,7 @@ path = os.path.join(os.getcwd(),'client','dist')
 
 @app.route('/')
 def hello():
-    return send_from_directory(directory=path,path='index.html')# --> will not work
+    return send_from_directory(directory=path,path='index.html')
 
 
 @app.route('/<path:filename>')
